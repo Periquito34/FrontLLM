@@ -1,0 +1,66 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eceff0;
+  min-height: 100vh; /* Asegura que el contenedor tenga al menos el alto de la ventana */
+  background-size: cover;
+  background-image: radial-gradient(circle at 67% 83%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgba(22,88,207, 0.04),rgba(7,91,215, 0.06));
+  flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan */
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(246, 246, 246);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+}
+
+textarea {
+  resize: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  width: 100%;
+  max-width: 200px;
+  background-color: #075ad79f;
+  border-color: #075ad71f;
+  font-family: "Roboto", sans-serif;
+}
+
+.category-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.9);
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Estilo para los títulos de sección */
+.question-title {
+  color: #075ad79f; /* Color rojo para los títulos de sección */
+}
+
+
+h1, h2 {
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.list-group-item {
+  background-color: #f8f9fa;
+}
