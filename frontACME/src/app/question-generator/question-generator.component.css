@@ -5,7 +5,7 @@
   background-color: #eceff0;
   min-height: 100vh; /* Asegura que el contenedor tenga al menos el alto de la ventana */
   background-size: cover;
-  background-image: radial-gradient(circle at 67% 83%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, rgba(65,129,188, 0.05) 0%, rgba(65,129,188, 0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgba(22,88,207, 0.04),rgba(7,91,215, 0.06));
+  background-image: radial-gradient(circle at 67% 83%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, rgba(245,245,245, 0.18) 0%, rgba(245,245,245, 0.18) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgba(207,36,22, 0.53),rgba(215,54,7, 0.06));
   flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan */
 }
 
@@ -20,19 +20,27 @@
   font-family: "Roboto", sans-serif;
 }
 
-textarea {
-  resize: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  font-family: "Roboto", sans-serif;
+.small-textarea {
+  resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+  width: 50%; /* Cambia el ancho del textarea al 50% del contenedor */
+  height: 10px; /* Ajusta la altura según tus necesidades */
+  font-family: "Roboto", sans-serif; /* Establece la fuente */
 }
+
 
 button {
   width: 100%;
   max-width: 200px;
-  background-color: #075ad79f;
-  border-color: #075ad71f;
+  background-color: rgba(207,36,22, 0.53);
+  border-color: rgba(207,36,22, 0.53);
   font-family: "Roboto", sans-serif;
+  margin: 20px 0;
+}
+
+button:hover {
+  background-color: rgba(207, 36, 22, 1); /* Rojo sólido */
+  border-color: rgba(207, 36, 22, 1); /* Rojo sólido */
 }
 
 .category-card {
@@ -47,7 +55,7 @@ button {
 
 /* Estilo para los títulos de sección */
 .question-title {
-  color: #075ad79f; /* Color rojo para los títulos de sección */
+  color: rgba(207,36,22, 0.53); /* Color rojo para los títulos de sección */
 }
 
 

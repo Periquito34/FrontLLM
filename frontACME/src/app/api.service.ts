@@ -14,4 +14,11 @@ export class ApiService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<any>(this.apiUrl, { context }, { headers });
   }
+
+  uploadFile(file: File): Observable<any> {
+    const formData: FormData = new FormData();
+    formData.append('file', file, file.name);
+
+    return this.http.post<any>(`${this.apiUrl}/upload`, formData);
+  }
 }

@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { QuestionGeneratorComponent } from './question-generator/question-generator.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { BodyComponent } from './body/body.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionGeneratorComponent,
+    FileUploadComponent,
     SideNavComponent,
     BodyComponent
   ],
