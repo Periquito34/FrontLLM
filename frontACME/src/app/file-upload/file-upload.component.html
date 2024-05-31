@@ -1,16 +1,27 @@
-<div class="container">
-    <h2>Upload File</h2>
-    <form (submit)="onUpload()">
-      <div class="form-group">
-        <label for="fileInput">Select a file:</label>
-        <input type="file" class="form-control-file" id="fileInput" (change)="onFileSelected($event)">
+<div class="wrapper">
+    <div class="container">
+      <h2>Subir Documento</h2>
+      <form (submit)="onUpload()">
+        <div class="form-group">
+          <label for="fileInput">Select a file:</label>
+          <input type="file" class="form-control-file" id="fileInput" (change)="onFileSelected($event)">
+        </div>
+        <button type="submit" class="btn btn-danger mt-2">Subir Documento</button>
+        <!-- Indicador de carga -->
+        <div *ngIf="loading" class="text-center my-3">
+          <div class="spinner-border text-danger" role="status">
+            <span class="sr-only"></span>
+          </div>
+          <p class="mt-2">Subiendo Documento...</p>
+        </div>
+      </form>
+      <div *ngIf="uploadMessage" class="alert mt-3" [ngClass]="{'alert-success': uploadMessage === 'Documento subido con exito!'}">
+        {{ uploadMessage }}
       </div>
-      <button type="submit" class="btn btn-primary mt-2">Upload</button>
-    </form>
-    <div *ngIf="uploadMessage" class="alert mt-3" [ngClass]="{'alert-success': uploadMessage === 'File uploaded successfully!', 'alert-danger': uploadMessage !== 'File uploaded successfully!'}">
-      {{ uploadMessage }}
-    </div>
-    <div *ngIf="downloadUrl" class="mt-3">
-      <a [href]="downloadUrl" target="_blank" class="btn btn-success">Download Processed PDF</a>
+      <div *ngIf="downloadUrl" class="mt-3">
+        <p>Documento Clasificado:</p>
+        <button (click)="onDownload()" class="btn btn-success">Descargar PDF Clasificado</button>
+      </div>
     </div>
   </div>
+  

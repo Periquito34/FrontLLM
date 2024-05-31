@@ -10,6 +10,7 @@ export class FileUploadComponent {
   selectedFile: File | null = null;
   uploadMessage: string = '';
   downloadUrl: string = '';
+  loading: boolean = false; // Variable para controlar el estado de carga
 
   constructor(private http: HttpClient) { }
 
@@ -25,6 +26,7 @@ export class FileUploadComponent {
 
     const formData: FormData = new FormData();
     formData.append('file', this.selectedFile);
+    this.loading = true; // Activar el indicador de carga
 
     this.http.post<any>('http://localhost:5000/upload', formData, {
       reportProgress: true,
@@ -38,14 +40,16 @@ export class FileUploadComponent {
             console.log('File is being uploaded...');
           }
         } else if (event.type === HttpEventType.Response) {
-          this.uploadMessage = 'File uploaded successfully!';
+          this.uploadMessage = 'Documento subido con exito!';
           this.downloadUrl = `http://localhost:5000/download/${event.body.output_path.split('/').pop()}`;
           console.log(event.body);
+          this.loading = false; // Desactivar el indicador de carga
         }
       },
       (error: HttpErrorResponse) => {
-        this.uploadMessage = `File upload failed: ${error.message}`;
+        this.uploadMessage = `Ha ocurrido un error en la carga: ${error.message}`;
         console.error(error);
+        this.loading = false; // Desactivar el indicador de carga en caso de error
       }
     );
   }
