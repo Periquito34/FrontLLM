@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Upload PDF to Generate User Stories</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Select PDF file</label>
+        <input class="form-control" type="file" id="formFile" (change)="onFileChange($event)" accept=".pdf">
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!file">Upload</button>
+    </form>
+  
+    <div *ngIf="uploadSuccess" class="alert alert-success mt-3">
+      File uploaded successfully! Download the processed file <a [href]="downloadLink" target="_blank">here</a>.
+    </div>
+    <div *ngIf="uploadError" class="alert alert-danger mt-3">
+      Error uploading file: {{ uploadError }}
+    </div>
+  </div>
+  

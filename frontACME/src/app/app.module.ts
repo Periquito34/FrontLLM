@@ -9,6 +9,7 @@ import { QuestionGeneratorComponent } from './question-generator/question-genera
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { BodyComponent } from './body/body.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     QuestionGeneratorComponent,
     FileUploadComponent,
     SideNavComponent,
-    BodyComponent
+    BodyComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
   bootstrap: [AppComponent,
     QuestionGeneratorComponent,
     SideNavComponent,
-    BodyComponent
+    BodyComponent,
+    UploadComponent
   ]
 })
 export class AppModule { }

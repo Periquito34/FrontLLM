@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuestionGeneratorComponent } from './question-generator/question-generator.component';
 import { BodyComponent } from './body/body.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
         {path: 'question-generator', component: QuestionGeneratorComponent},
         { path: '', redirectTo: 'question-generator', pathMatch: 'full' },
         {path: 'file-upload', component: FileUploadComponent},
+        { path: 'upload', component: UploadComponent}
     ]  
   },
   { path: '', redirectTo: 'body', pathMatch: 'full' } 
