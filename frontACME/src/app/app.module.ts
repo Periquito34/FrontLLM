@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';  // Asegúrate de impor
 
 import { AppComponent } from './app.component';
 import { QuestionGeneratorComponent } from './question-generator/question-generator.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionGeneratorComponent
+    QuestionGeneratorComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
