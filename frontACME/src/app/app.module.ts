@@ -6,11 +6,15 @@ import { AppRoutingModule } from './app-routing.module';  // Asegúrate de impor
 
 import { AppComponent } from './app.component';
 import { QuestionGeneratorComponent } from './question-generator/question-generator.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionGeneratorComponent
+    QuestionGeneratorComponent,
+    SideNavComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +23,10 @@ import { QuestionGeneratorComponent } from './question-generator/question-genera
     AppRoutingModule  // Asegúrate de incluir esto en los imports
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,
+    QuestionGeneratorComponent,
+    SideNavComponent,
+    BodyComponent
+  ]
 })
 export class AppModule { }
